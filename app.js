@@ -3,6 +3,18 @@ const mongoose = require('mongoose'); //npm install mongoose
 mongoose.connect("mongodb://127.0.0.1:27017/fruitsDB",{useNewUrlParser: true}); //name of database at the end.
 
 
+
+const fruitSchema = new mongoose.Schema({
+    name:String,
+    rating: Number,
+    review:String
+  });
+  
+const Fruit = mongoose.model("Fruit", fruitSchema) //collections called - fruits string - need to put singluar form.
+
+
+
+
 // - 1) Read Opersation - To view the fruit documents from the fruits collection from the fruitsDB database.
 Fruit.find(function(err,fruits){
     if(err){
@@ -16,6 +28,17 @@ Fruit.find(function(err,fruits){
     }
   })
 
+
+
+  const personSchema = new mongoose.Schema({
+    name: String,
+    age: Number,
+  })
+  
+  const Person = mongoose.model("Person", personSchema) //behind the scenes collection of people will be created pluarl form of string - person
+
+
+  
   // - 2) Read Operation - To view the people documents from the people collection from the fruitsDB database.
   Person.find(function(err,people){
     if(err){
