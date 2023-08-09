@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 
+mongoose.set("strictQuery", true);
+
 mongoose.connect("mongodb://localhost:27017/fruitsDB") //name of database at the end.
 
 
@@ -14,6 +16,7 @@ const fruitSchema = new mongoose.Schema({
       max:10
     },
     review:String
+    
   });
   
   const Fruit = mongoose.model("Fruit", fruitSchema) //collections called - fruits string - need to put singluar form.
