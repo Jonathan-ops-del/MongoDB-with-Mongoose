@@ -23,7 +23,7 @@ const fruitSchema = new mongoose.Schema({
   const apple = new Fruit({
     name:"Apple",
     rating:7,
-    review:"Pretty solid as a fruit."
+    reviews:"Pretty solid as a fruit."
   })
   
   apple.save(); // Method of inserting a single document into the fruits collection of the fruitsDB database.
@@ -32,26 +32,26 @@ const fruitSchema = new mongoose.Schema({
   const kiwi = new Fruit({
     name:"Kiwi",
     rating:10,
-    review: "The best fruit"
+    reviews: "The best fruit"
   })
   
   
   const orange = new Fruit({
     name:"Orange",
     rating:4,
-    review: "Too sour for me."
+    reviews: "Too sour for me."
   })
 
   const oranges = new Fruit({
     name:"Orange",
     rating:4,
-    review: "Too sour for me."
+    reviews: "Too sour for me."
   })
   
   const banana = new Fruit({
     name:"Banana",
     rating:3,
-    review:"Weird texture"
+    reviews:"Weird texture"
   })
   
   Fruit.insertMany([kiwi,orange,oranges,banana], function(err){   // Method of inserting multiple documents into the fruits collection of the fruitsDB database.
@@ -76,7 +76,7 @@ const personSchema = new mongoose.Schema({
 const Person = mongoose.model("Person",personSchema);
 
 const pineapple = new Fruit ({
-  name:"pineapple",
+  name:"Pineapple",
   rating:3,
   reviews:"Okay"
 })
