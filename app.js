@@ -54,7 +54,7 @@ const fruitSchema = new mongoose.Schema({
     review:"Weird texture"
   })
   
-  Fruit.insertMany([kiwi,orange, oranges, banana], function(err){   // Method of inserting multiple documents into the fruits collection of the fruitsDB database.
+  Fruit.insertMany([kiwi,orange,oranges,banana], function(err){   // Method of inserting multiple documents into the fruits collection of the fruitsDB database.
     if (err){
       console.log(err);
     }
@@ -64,7 +64,7 @@ const fruitSchema = new mongoose.Schema({
   })
 
 
-// 2) Create Operation : Inserting people documents into the people collection of the fruitsDB database.
+// 2) Create Operation : Inserting a single document into the people collection of the fruitsDB database.
 
 const personSchema = new mongoose.Schema({
     name: String,
